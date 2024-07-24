@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+
+    <link rel="stylesheet" href="src/style/style.css">
+</head>
+
+<body>
+    <nav>
+        <button onclick="aparecer()" id="criar_conta">criar conta</button>
+        <button id="entrar_conta">Entrar</button>
+    </nav>
+
+    <div class="imagem-tela">
+        <img src="./src/img/1920_1200_20100427125153210981.jpg" alt="">
+    </div>
+
+    <div id="dwe">
+        <form  action="" class="formulario">
+            <button onclick="desaparecer()" class="close">✕</button>
+            <div class="main-text">
+                <h1> Faça o seu cadastro!</h1>
+            </div>
+            <section>
+                <div>
+                    <label for="nome_id">nome</label>
+                    <input id="nome_id" type="text" name="Nome do Usuario" placeholder="nome do usuário" required>
+                </div>
+                <div>
+                    <label for="apelido_id">apelido</label>
+                    <input id="apelido_id" type="text" name="Apelido" placeholder="Apelido" required>
+                </div>
+                <div>
+                    <label for="data_id">idade</label>
+                    <input id="data_id" type="date" name="idade" required>
+                </div>
+                <div>
+                    <label for="email_id">email</label>
+                    <input id="email_id" class="email" type="email" name="Endereço de email" placeholder="insira@email" required>
+                </div>
+                <div class="Palavra-passe">
+                    <label for="password_id">password</label>
+                    <input id="password_id" type="password" name="Palavra-passe" placeholder="palavra passe" required>
+                </div>
+            </section>
+            <button onclick="desaparecerFormulario()" class="send-input" type="submit">Enviar Cadastro</button>
+        </form>
+    </div>
+
+    <div class="feitoPor">
+        <h2>Edinel Mário Adelso</h2>
+    </div>
+</body>
+<script>
+    const dwe = window.document.getElementById('dwe')
+    dwe.style.position = 'absolute';
+    dwe.style.zIndex = '-3';
+    function aparecer(){
+    dwe.style.zIndex = '3';}
+
+    function desaparecer(){
+        dwe.style.zIndex = '-3'
+    }
+</script>
+</html>
